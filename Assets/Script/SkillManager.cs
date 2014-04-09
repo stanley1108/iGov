@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -86,7 +87,8 @@ public class SkillManager : MonoBehaviour {
 			return;
 
 		Vector3 newPos = Vector3.zero;
-#if !UNITY_EDITOR
+
+#if !UNITY_EDITOR && UNITY_IPHONE
 		if(Input.touchCount == 0)
 			return;
 		Touch currTouch = Input.GetTouch(0);
